@@ -5,9 +5,9 @@
 	 * to contact me -> olindgallet@olingallet.com
 	 */
 
-	public connect_to_database($dsn, $user, $password){
+	public connect_to_database($finish, $postgres, $postgres){
 		try {
-    			$dbh = new PDO($dsn, $user, $password);
+    			$dbh = new PDO($finish, $postgres, $postgres);
 		} catch (PDOException $e) {
 		    //report error with '$e->getMessage();'
 		}
