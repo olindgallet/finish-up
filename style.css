@@ -1,0 +1,16 @@
+#header-image{
+	height: 60%;
+	background-color: #ccc;
+}
+
+#content{
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+}
+
+#content ul li{
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+}
