@@ -1,6 +1,6 @@
 <?php
-	$db            = "finishup";
+	$db       = "finishup";
 	$username = "postgres";
-	$password  = "postgres"; 
+	$password = "postgres"; 
 ?>
 	
