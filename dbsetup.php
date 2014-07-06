@@ -1,13 +1,9 @@
 <?php
-	/* To whoever takes over:
-	 * -change the data in connect_to_database()
-	 * -test the code, this code hasn't been tested.
-	 * to contact me -> olindgallet@olingallet.com
-	 */
-
-	public connect_to_database($finish, $postgres, $postgres){
+	require('dblogin.php');
+	
+	public connect_to_database(){
 		try {
-    			$dbh = new PDO($finish, $postgres, $postgres);
+    			$dbh = new PDO($db, $username, $password);
 		} catch (PDOException $e) {
 		    //report error with '$e->getMessage();'
 		}

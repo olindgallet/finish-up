@@ -1,4 +1,5 @@
 <?php
+	require('dblogin.php');
 	/**
 	 * To whoever takes over:
 	 * -change the data in connect_to_database()
@@ -16,7 +17,6 @@
 		    //report error with '$e->getMessage();'
 		}
 	}
-
 
 	/**
 	 * Add hacker to the database
@@ -43,12 +43,42 @@
 	  }
 	  
 	  /**
-	   * Add task to the database
+	   * Add task to the database.
 	   */
 	   public add_task($short_description, $long_description){
 	   	   $smt = $dbh->prepare('INSERT INTO task VALUES (,?,?,)');
 	   	   $smt->execute(array($short_description, $long_description));
 	   }
 	   
-	   
+	   /**
+	    * Get all hackers.
+		*/
+		public get_hackers(){
+			$smt = $dbh->prepare('SELECT first_name, last_name FROM hackers');
+			return $smt->fetchAll(PDO::FETCH_ASSOC);
+		}
+		
+		/**
+		 * Get all projects.
+		 */
+		 public get_projects(){
+			$smt = $dbh->prepare('SELECT first_name, last_name FROM hackers');
+			return $smt->fetchAll(PDO::FETCH_ASSOC);
+		 }
+		 
+		 /**
+		  * Get all mentors.
+		  */
+		 public get_mentors(){
+			$smt = $dbh->prepare('SELECT first_name, last_name FROM hackers');
+			return $smt->fetchAll(PDO::FETCH_ASSOC);
+		 }
+		 
+		 /**
+		  * Get all tasks.
+		  */
+		 public get_tasks(){
+			$smt = $dbh->prepare('SELECT first_name, last_name FROM hackers');
+			return $smt->fetchAll(PDO::FETCH_ASSOC);
+		 }
 ?>
